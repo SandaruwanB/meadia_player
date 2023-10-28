@@ -1,5 +1,4 @@
 const { app, BrowserWindow } = require('electron');
-const drag = require('electron-drag');
 const path = require('path');
 
 if (require('electron-squirrel-startup')) {
@@ -11,6 +10,7 @@ const createWindow = () => {
     width: 800,
     height: 600,
     frame : false,
+    resizable : false,
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
     },
@@ -19,7 +19,6 @@ const createWindow = () => {
   // and load the index.html of the app.
   mainWindow.loadFile(path.join(__dirname, '/components/index.html'));
 
-  drag(mainWindow, {region : 'drag'});
   // Open the DevTools.
   mainWindow.webContents.openDevTools();
 };
