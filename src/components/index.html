@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello World!</title>
+    <link rel="stylesheet" href="index.css" />
+    <style>
+      #name{
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>💖 Hello World!</h1>
+    <h1 id="name">Sandaruwan</h1>
+    <p>Welcome to your Electron application.</p>
+    <button id="click">click me</button>
+  <script>
+    let count = 0;
+    document.getElementById('click').addEventListener('click', (e)=>{
+      document.getElementById('name').style.display = "block";
+    });
+  </script>
+  </body>
+</html>
